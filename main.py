@@ -21,7 +21,7 @@ engine.setProperty('voice', voices[1].id)
 
 
 def talk(text):
-    # engine.say(text)
+    engine.say(text)
     engine.runAndWait()
 
 
@@ -60,13 +60,13 @@ def run_daisy():
         talk('playing ' + song)
         pywhatkit.playonyt(song)
     elif 'text' and 'baby' in command:
-        send_whatsapp_message("+1(787)2427974")
+        send_whatsapp_message("+1(787)0000000")
     elif 'text' and 'eli' in command:
-        send_whatsapp_message("+1(859)3196196")
+        send_whatsapp_message("+1(859)0000000")
     elif 'message' and 'baby' in command:
-        send_whatsapp_message("+1(787)2427974")
+        send_whatsapp_message("+1(787)0000000")
     elif 'message' and 'eli' in command:
-        send_whatsapp_message("+1(614)6153553")
+        send_whatsapp_message("+1(614)0000000")
     elif 'time' in command:
         time = datetime.datetime.now().strftime('%I:%M %p')
         talk('Current time is ' + time)
@@ -80,15 +80,13 @@ def run_daisy():
         today = date.today().strftime('%B %d, %Y')
         talk("Today is " + today)
     elif 'name' in command:
-        talk('People call me Daisy. But my real name is Harley Quinn.'
-             ' I have been an undercover all this while. I am the meanest '
-             'person you will ever meet. Never take an advice from me')
+        talk('My name is Daisy the great.')
     elif 'are you single' in command:
         talk('Dating is overrated')
     elif 'joke' in command:
         talk(pyjokes.get_joke())
     else:
-        talk('I did not hear you, now repeat what you just said in English hahaha')
+        talk("Sorry I didn't understand. Please repeat")
 
 
 while True:
