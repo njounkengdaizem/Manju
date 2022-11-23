@@ -44,6 +44,9 @@ def take_command():
 def send_whatsapp_message(phone_number):
     pywhatkit.sendwhatmsg_instantly(phone_number, "How are you doing?")
 
+def send_whatsapp_image(phone_number, image):
+    pywhatkit.sendwhats_image(phone_number, image)
+
 
 def send_message(phone_number):
     os.system("open -a Messages")
@@ -54,37 +57,55 @@ def send_message(phone_number):
 
 def run_daisy():
     command = take_command()
-    print(command)
+
+    # Play Song
     if 'play' in command:
         song = command.replace('play', '')
         talk('playing ' + song)
         pywhatkit.playonyt(song)
-    elif 'text' and 'baby' in command:
-        send_whatsapp_message("+1(787)0000000")
-    elif 'text' and 'eli' in command:
+
+    # Send a whatsapp message
+    elif 'text' and 'john' in command:
+        send_whatsapp_message("+1 (614) 615-3553")
+    elif 'text' and 'micky' in command:
         send_whatsapp_message("+1(859)0000000")
-    elif 'message' and 'baby' in command:
+
+    # Send a picture on whatsapp
+    elif 'picture' and 'john' in command:
+        pywhatkit.sendwhats_image("+1(614)6153553", "Images/cute_cat.jpg")
+
+    # Send an SMS
+    elif 'message' and 'john' in command:
         send_whatsapp_message("+1(787)0000000")
-    elif 'message' and 'eli' in command:
+    elif 'message' and 'micky' in command:
         send_whatsapp_message("+1(614)0000000")
+
+    # Tell the time
     elif 'time' in command:
         time = datetime.datetime.now().strftime('%I:%M %p')
         talk('Current time is ' + time)
 
-    elif 'who the heck is' in command:
-        person = command.replace('who the heck is', '')
-        info = wikipedia.summary(person, 1)
-        print(info)
-        talk(info)
+     # Tell the date
     elif 'date' in command:
         today = date.today().strftime('%B %d, %Y')
         talk("Today is " + today)
+
+    # Find someone on wikipedia
+    elif 'who is' in command:
+        person = command.replace('who is', '')
+        info = wikipedia.summary(person, 1)
+        print(info)
+        talk(info)
+
+    # Random/funny commands
     elif 'name' in command:
         talk('My name is Daisy the great.')
     elif 'are you single' in command:
         talk('Dating is overrated')
     elif 'joke' in command:
         talk(pyjokes.get_joke())
+
+    # Case where audio isn't audible
     else:
         talk("Sorry I didn't understand. Please repeat")
 
