@@ -17,6 +17,7 @@ Requirements for the software and other tools to build, test and push
 - [Text to Speech](https://pypi.org/project/pyttsx3/)
 - [Wikipedia data](https://pypi.org/project/wikipedia/)
 - [Browser navigation](https://pypi.org/project/pywhatkit/)
+- [pyjokes](https://pypi.org/project/pyjokes/)
 
 ### Installing
 
