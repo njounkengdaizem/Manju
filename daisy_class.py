@@ -64,7 +64,7 @@ class Daisy():
         This method takes a single argument, a name, and uses the `pywhatkit` library to send a WhatsApp message to the number associated with the given name.
         """
         if "john" in name:
-            pywhatkit.sendwhatmsg_instantly("+17872427974", "Hello Handsome")
+            pywhatkit.sendwhatmsg_instantly("+1787242700", "Hello Sir")
 
 
     def send_whatsapp_image(self, phone_number:str, image:str):
