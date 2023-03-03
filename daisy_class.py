@@ -3,6 +3,7 @@ import sys
 import speech_recognition as speech
 import pyttsx3
 import pywhatkit
+import playsound
 from datetime import date
 import time
 import pynput
@@ -14,7 +15,7 @@ import pyjokes
 
 class Daisy():
     """
-    Daisy is a class that provides a simple interface to interact with the user using speech recognition and Text-to-Speech. 
+    Daisy is a class that provides a simple interface to interact with the user using speech recognition and Text-to-Speech.
     The class uses several libraries such as speech_recognition, pyttsx3, pywhatkit, datetime, time, pynput, wikipedia, pyjokes.
     """
 
@@ -24,16 +25,18 @@ class Daisy():
         """
         self.listener = speech.Recognizer()
         self.engine = pyttsx3.init()
-        self.voices = self.engine.getProperty('voices')
-        for voice in self.voices:
-            self.engine.setProperty('voice', voice.id)
-            self.engine.setProperty('voice', self.voices[1].id)
+        # self.voices = self.engine.getProperty('voices')
+        # print(self.voices)
+        # print(self.voices)
+        # for voice in self.voices:
+        #     self.engine.setProperty('voice', voice.id)
+        #     self.engine.setProperty('voice', self.voices[1].id)
 
     def talk(self,text):
         """
         This method takes a single argument, a text string, and uses the `pyttsx3` library to speak the text.
         """
-        self.engine.say(text) 
+        self.engine.say(text)
         self.engine.runAndWait()
 
     def take_command(self):
@@ -41,32 +44,28 @@ class Daisy():
         This method listens to the microphone and uses the Google Speech Recognition service to recognize the audio.
         If the audio is not understood, it returns an empty string.
         """
+        print("Listening")
         try:
             with speech.Microphone() as source:
-                print('listening...')
-                voice = self.listener.listen(source)
-                command = self.listener.recognize_google(voice)
+                audio = self.listener.listen(source, timeout=8, phrase_time_limit=8)
+                command = ""
+                command = self.listener.recognize_google(audio)
                 command = command.lower()
                 if 'daisy' in command:
                     command = command.replace('daisy', '')
+                    self.executioner(command)
                     print(command)
         except speech.UnknownValueError as e:
             print("Could not understand audio")
-            command = ""
-        except speech.RequestError as e:
-            print("Could not request from Google Speech Recognition service; {0}".format(e))
-            command = ""
         return command
 
     def send_whatsapp_message(self, name:str):
         """
         This method takes a single argument, a name, and uses the `pywhatkit` library to send a WhatsApp message to the number associated with the given name.
         """
-        for i in name:
-            print (i)
-            print("\n.")
         if "john" in name:
-            pywhatkit.sendwhatmsg_instantly("+1(000)000-0000", "Howdy, como estas?")
+            pywhatkit.sendwhatmsg_instantly("+17872427974", "Hello Handsome")
+
 
     def send_whatsapp_image(self, phone_number:str, image:str):
         """
@@ -74,7 +73,7 @@ class Daisy():
         """
         pywhatkit.sendwhats_image(phone_number, image)
 
-    def play_media(self, media:str):
+    def play_media(self, media: str):
         """
         This method takes a single argument, media, and uses the `pywhatkit` library to play the media on youtube.
         """
@@ -96,3 +95,14 @@ class Daisy():
         keyboard = Controller()
         keyboard.type("Hi beautiful, how are you doing?")
         keyboard.press(Key.enter)
+
+    def executioner(self, command):
+        match command:
+            case x if "play" in x:
+                self.play_media(x.replace('play', '').strip())
+            case x if "text john" in x:
+                self.send_whatsapp_message("john")
+
+
+test = Daisy()
+test.take_command()
