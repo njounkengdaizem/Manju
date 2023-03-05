@@ -13,6 +13,7 @@ import datetime
 import wikipedia
 import pyjokes
 
+
 class Daisy():
     """
     Daisy is a class that provides a simple interface to interact with the user using speech recognition and Text-to-Speech.
@@ -32,7 +33,7 @@ class Daisy():
         #     self.engine.setProperty('voice', voice.id)
         #     self.engine.setProperty('voice', self.voices[1].id)
 
-    def talk(self,text):
+    def talk(self, text):
         """
         This method takes a single argument, a text string, and uses the `pyttsx3` library to speak the text.
         """
@@ -51,23 +52,22 @@ class Daisy():
                 command = ""
                 command = self.listener.recognize_google(audio)
                 command = command.lower()
-                if 'daisy' in command:
-                    command = command.replace('daisy', '')
+                if 'manju' in command:
+                    command = command.replace('manju', '')
                     self.executioner(command)
                     print(command)
         except speech.UnknownValueError as e:
             print("Could not understand audio")
         return command
 
-    def send_whatsapp_message(self, name:str):
+    def send_whatsapp_message(self, name: str):
         """
         This method takes a single argument, a name, and uses the `pywhatkit` library to send a WhatsApp message to the number associated with the given name.
         """
         if "john" in name:
             pywhatkit.sendwhatmsg_instantly("+1787242700", "Hello Sir")
 
-
-    def send_whatsapp_image(self, phone_number:str, image:str):
+    def send_whatsapp_image(self, phone_number: str, image: str):
         """
         This method takes two arguments, phone number and image, and uses the `pywhatkit` library to send a WhatsApp image to the given phone number.
         """
@@ -77,17 +77,17 @@ class Daisy():
         """
         This method takes a single argument, media, and uses the `pywhatkit` library to play the media on youtube.
         """
-        self.talk('playing ' + media)
+        self.talk('playing ' + media + 'on YouTube')
         pywhatkit.playonyt(media)
 
     def current_time(self):
         """
         This method tells the current time using `datetime` library.
         """
-        time = datetime.datetime.now().strftime('%I:%M %p')
-        self.talk('Current time is ' + time)
+        currentTime = datetime.datetime.now().strftime('%I:%M %p')
+        self.talk('Current time is ' + currentTime)
 
-    def send_message(self, phone_number:str):
+    def send_message(self, phone_number: str):
         """
         This method takes phone number as an argument and uses `os` and `pynput` library to open message application and send message to the given phone number.
         """
@@ -100,8 +100,14 @@ class Daisy():
         match command:
             case x if "play" in x:
                 self.play_media(x.replace('play', '').strip())
-            case x if "text john" in x:
+            case x if "message" in x:
                 self.send_whatsapp_message("john")
+            case x if "image" in x:
+                self.send_whatsapp_image('phone number', 'image path')
+            case x if "time" in x:
+                self.current_time()
+            case x if "text" in x:
+                self.send_message('phone number')
 
 
 test = Daisy()

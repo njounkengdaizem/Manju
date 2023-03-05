@@ -1,4 +1,4 @@
-# ConversationalAI_daisy
+# PersonalAssistant_Manju
 
 Inspiration from Amazon Alexa's conversational AI
 These initial developments are out of personal interests. 
