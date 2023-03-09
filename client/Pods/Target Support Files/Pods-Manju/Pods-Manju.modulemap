@@ -1,0 +1,6 @@
+framework module Pods_Manju {
+  umbrella header "Pods-Manju-umbrella.h"
+
+  export *
+  module * { export * }
+}
