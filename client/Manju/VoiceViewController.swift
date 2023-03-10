@@ -43,10 +43,12 @@ class VoiceViewController: UIViewController{
         voiceOverlay.start(on: self, textHandler: {text, final, _ in
             
             if final{
-                print(self.myViewModel.response)
-//                let manjuResponse = self.myViewModel.response
-//                self.startSpeech(say: manjuResponse[0])
                 print("Final text: \(text)")
+                DispatchQueue.main.async {
+                    self.myViewModel.onAppear()
+                    print(self.myViewModel.response)
+                }
+                
             }
             else{
                 // print("In Progress: \(text)")

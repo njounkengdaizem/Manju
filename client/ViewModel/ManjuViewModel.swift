@@ -9,7 +9,7 @@ import Foundation
 
 final class ManjuViewModel: ObservableObject{
     
-    @Published var response = [""]
+    @Published var response = ["Hardcoded test here"]
     
     private let repository: ResponseRepositoryProtocol
     
