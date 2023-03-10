@@ -7,119 +7,133 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B7634E4929B5645600663079 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7634E4829B5645600663079 /* URLSession.swift */; };
-		B76C071E29B39B9D009486A6 /* ManjuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76C071D29B39B9D009486A6 /* ManjuApp.swift */; };
-		B76C072029B39B9D009486A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76C071F29B39B9D009486A6 /* ContentView.swift */; };
-		B76C072229B39B9E009486A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B76C072129B39B9E009486A6 /* Assets.xcassets */; };
-		B76C072529B39B9E009486A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B76C072429B39B9E009486A6 /* Preview Assets.xcassets */; };
-		B76C072D29B39BC3009486A6 /* ViewA.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76C072C29B39BC3009486A6 /* ViewA.swift */; };
-		B76C072F29B39BD0009486A6 /* ViewB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76C072E29B39BD0009486A6 /* ViewB.swift */; };
-		B76C073129B39BD9009486A6 /* ViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76C073029B39BD9009486A6 /* ViewC.swift */; };
-		B78EC00A29B9588D0073DCCC /* VoiceOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78EC00929B9588D0073DCCC /* VoiceOverlayViewController.swift */; };
-		F95C37299F0F54E52D69F9FC /* Pods_Manju.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF2337689CD5146CEF3DD1E /* Pods_Manju.framework */; };
+		08CFAC0B64750267EF0DFD6F /* Pods_Manju.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BD58FA4B2E7E8FD92D4951 /* Pods_Manju.framework */; };
+		B772957829BAA5E400F82263 /* ManjuTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772957729BAA5E400F82263 /* ManjuTabBarController.swift */; };
+		B772957B29BAB60600F82263 /* ManjuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772957A29BAB60600F82263 /* ManjuViewModel.swift */; };
+		B772957F29BAB6C400F82263 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772957E29BAB6C400F82263 /* Response.swift */; };
+		B772958129BAB74500F82263 /* ResponseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B772958029BAB74500F82263 /* ResponseRepository.swift */; };
+		B78EC02529B9B5320073DCCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78EC02429B9B5320073DCCC /* AppDelegate.swift */; };
+		B78EC02729B9B5320073DCCC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78EC02629B9B5320073DCCC /* SceneDelegate.swift */; };
+		B78EC02929B9B5320073DCCC /* VoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78EC02829B9B5320073DCCC /* VoiceViewController.swift */; };
+		B78EC02C29B9B5320073DCCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B78EC02A29B9B5320073DCCC /* Main.storyboard */; };
+		B78EC02E29B9B5330073DCCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B78EC02D29B9B5330073DCCC /* Assets.xcassets */; };
+		B78EC03129B9B5330073DCCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B78EC02F29B9B5330073DCCC /* LaunchScreen.storyboard */; };
+		B78EC03A29BA80B60073DCCC /* ResponseApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78EC03929BA80B60073DCCC /* ResponseApiService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0EF2337689CD5146CEF3DD1E /* Pods_Manju.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Manju.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		21D2CAD43958C89A04F16ADD /* Pods-Manju.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manju.release.xcconfig"; path = "Target Support Files/Pods-Manju/Pods-Manju.release.xcconfig"; sourceTree = "<group>"; };
-		B7634E4829B5645600663079 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
-		B76C071A29B39B9D009486A6 /* Manju.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Manju.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B76C071D29B39B9D009486A6 /* ManjuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManjuApp.swift; sourceTree = "<group>"; };
-		B76C071F29B39B9D009486A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		B76C072129B39B9E009486A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B76C072429B39B9E009486A6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B76C072C29B39BC3009486A6 /* ViewA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewA.swift; sourceTree = "<group>"; };
-		B76C072E29B39BD0009486A6 /* ViewB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewB.swift; sourceTree = "<group>"; };
-		B76C073029B39BD9009486A6 /* ViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewC.swift; sourceTree = "<group>"; };
-		B78EC00829B85D330073DCCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		B78EC00929B9588D0073DCCC /* VoiceOverlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverlayViewController.swift; sourceTree = "<group>"; };
-		D920A7360CF2CFFCC31DC04B /* Pods-Manju.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manju.debug.xcconfig"; path = "Target Support Files/Pods-Manju/Pods-Manju.debug.xcconfig"; sourceTree = "<group>"; };
+		569BB75B6AFCB74F0E509D9C /* Pods-Manju.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manju.debug.xcconfig"; path = "Target Support Files/Pods-Manju/Pods-Manju.debug.xcconfig"; sourceTree = "<group>"; };
+		A3BD58FA4B2E7E8FD92D4951 /* Pods_Manju.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Manju.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B772957729BAA5E400F82263 /* ManjuTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManjuTabBarController.swift; sourceTree = "<group>"; };
+		B772957A29BAB60600F82263 /* ManjuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManjuViewModel.swift; sourceTree = "<group>"; };
+		B772957E29BAB6C400F82263 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		B772958029BAB74500F82263 /* ResponseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseRepository.swift; sourceTree = "<group>"; };
+		B78EC02129B9B5320073DCCC /* Manju.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Manju.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B78EC02429B9B5320073DCCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B78EC02629B9B5320073DCCC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B78EC02829B9B5320073DCCC /* VoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceViewController.swift; sourceTree = "<group>"; };
+		B78EC02B29B9B5320073DCCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B78EC02D29B9B5330073DCCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B78EC03029B9B5330073DCCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B78EC03229B9B5330073DCCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B78EC03929BA80B60073DCCC /* ResponseApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseApiService.swift; sourceTree = "<group>"; };
+		D7FA8AF26047CA7C10DE2763 /* Pods-Manju.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manju.release.xcconfig"; path = "Target Support Files/Pods-Manju/Pods-Manju.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B76C071729B39B9D009486A6 /* Frameworks */ = {
+		B78EC01E29B9B5320073DCCC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F95C37299F0F54E52D69F9FC /* Pods_Manju.framework in Frameworks */,
+				08CFAC0B64750267EF0DFD6F /* Pods_Manju.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1DADF800C6A598404E59382C /* Frameworks */ = {
+		0DEEEA2C21CEF8624BCAD6EC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0EF2337689CD5146CEF3DD1E /* Pods_Manju.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2914B0E4C0072A282FE4CE86 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D920A7360CF2CFFCC31DC04B /* Pods-Manju.debug.xcconfig */,
-				21D2CAD43958C89A04F16ADD /* Pods-Manju.release.xcconfig */,
+				569BB75B6AFCB74F0E509D9C /* Pods-Manju.debug.xcconfig */,
+				D7FA8AF26047CA7C10DE2763 /* Pods-Manju.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		B76C071129B39B9D009486A6 = {
+		85BF68B8BF9B2ECC14A759C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B78EC00929B9588D0073DCCC /* VoiceOverlayViewController.swift */,
-				B78EC00B29B972AF0073DCCC /* Services */,
-				B76C071C29B39B9D009486A6 /* Manju */,
-				B76C071B29B39B9D009486A6 /* Products */,
-				2914B0E4C0072A282FE4CE86 /* Pods */,
-				1DADF800C6A598404E59382C /* Frameworks */,
+				A3BD58FA4B2E7E8FD92D4951 /* Pods_Manju.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B772957929BAB5BC00F82263 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B772957A29BAB60600F82263 /* ManjuViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B772957D29BAB6AC00F82263 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B772957E29BAB6C400F82263 /* Response.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B772958229BAB74D00F82263 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				B772958029BAB74500F82263 /* ResponseRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		B78EC01829B9B5320073DCCC = {
+			isa = PBXGroup;
+			children = (
+				B772958229BAB74D00F82263 /* Repositories */,
+				B772957D29BAB6AC00F82263 /* Models */,
+				B772957929BAB5BC00F82263 /* ViewModel */,
+				B78EC03829BA809D0073DCCC /* Services */,
+				B78EC02329B9B5320073DCCC /* Manju */,
+				B78EC02229B9B5320073DCCC /* Products */,
+				0DEEEA2C21CEF8624BCAD6EC /* Pods */,
+				85BF68B8BF9B2ECC14A759C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		B76C071B29B39B9D009486A6 /* Products */ = {
+		B78EC02229B9B5320073DCCC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B76C071A29B39B9D009486A6 /* Manju.app */,
+				B78EC02129B9B5320073DCCC /* Manju.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B76C071C29B39B9D009486A6 /* Manju */ = {
+		B78EC02329B9B5320073DCCC /* Manju */ = {
 			isa = PBXGroup;
 			children = (
-				B78EC00829B85D330073DCCC /* Info.plist */,
-				B76C072B29B39BB6009486A6 /* Views */,
-				B76C071D29B39B9D009486A6 /* ManjuApp.swift */,
-				B76C071F29B39B9D009486A6 /* ContentView.swift */,
-				B76C072129B39B9E009486A6 /* Assets.xcassets */,
-				B76C072329B39B9E009486A6 /* Preview Content */,
+				B78EC02429B9B5320073DCCC /* AppDelegate.swift */,
+				B78EC02629B9B5320073DCCC /* SceneDelegate.swift */,
+				B78EC02829B9B5320073DCCC /* VoiceViewController.swift */,
+				B772957729BAA5E400F82263 /* ManjuTabBarController.swift */,
+				B78EC02A29B9B5320073DCCC /* Main.storyboard */,
+				B78EC02D29B9B5330073DCCC /* Assets.xcassets */,
+				B78EC02F29B9B5330073DCCC /* LaunchScreen.storyboard */,
+				B78EC03229B9B5330073DCCC /* Info.plist */,
 			);
 			path = Manju;
 			sourceTree = "<group>";
 		};
-		B76C072329B39B9E009486A6 /* Preview Content */ = {
+		B78EC03829BA809D0073DCCC /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				B76C072429B39B9E009486A6 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		B76C072B29B39BB6009486A6 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				B76C072C29B39BC3009486A6 /* ViewA.swift */,
-				B76C072E29B39BD0009486A6 /* ViewB.swift */,
-				B76C073029B39BD9009486A6 /* ViewC.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		B78EC00B29B972AF0073DCCC /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				B7634E4829B5645600663079 /* URLSession.swift */,
+				B78EC03929BA80B60073DCCC /* ResponseApiService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -127,15 +141,15 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B76C071929B39B9D009486A6 /* Manju */ = {
+		B78EC02029B9B5320073DCCC /* Manju */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B76C072829B39B9E009486A6 /* Build configuration list for PBXNativeTarget "Manju" */;
+			buildConfigurationList = B78EC03529B9B5330073DCCC /* Build configuration list for PBXNativeTarget "Manju" */;
 			buildPhases = (
-				95B4288BD3CD7EE78C525155 /* [CP] Check Pods Manifest.lock */,
-				B76C071629B39B9D009486A6 /* Sources */,
-				B76C071729B39B9D009486A6 /* Frameworks */,
-				B76C071829B39B9D009486A6 /* Resources */,
-				C9AF90C9F08CB3417A55C272 /* [CP] Embed Pods Frameworks */,
+				D0A97DBA880D5F77632E6180 /* [CP] Check Pods Manifest.lock */,
+				B78EC01D29B9B5320073DCCC /* Sources */,
+				B78EC01E29B9B5320073DCCC /* Frameworks */,
+				B78EC01F29B9B5320073DCCC /* Resources */,
+				847B2ABBC41C2C3EB5FB4482 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -143,25 +157,25 @@
 			);
 			name = Manju;
 			productName = Manju;
-			productReference = B76C071A29B39B9D009486A6 /* Manju.app */;
+			productReference = B78EC02129B9B5320073DCCC /* Manju.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B76C071229B39B9D009486A6 /* Project object */ = {
+		B78EC01929B9B5320073DCCC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
-					B76C071929B39B9D009486A6 = {
+					B78EC02029B9B5320073DCCC = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
 			};
-			buildConfigurationList = B76C071529B39B9D009486A6 /* Build configuration list for PBXProject "Manju" */;
+			buildConfigurationList = B78EC01C29B9B5320073DCCC /* Build configuration list for PBXProject "Manju" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -169,30 +183,48 @@
 				en,
 				Base,
 			);
-			mainGroup = B76C071129B39B9D009486A6;
-			productRefGroup = B76C071B29B39B9D009486A6 /* Products */;
+			mainGroup = B78EC01829B9B5320073DCCC;
+			productRefGroup = B78EC02229B9B5320073DCCC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B76C071929B39B9D009486A6 /* Manju */,
+				B78EC02029B9B5320073DCCC /* Manju */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B76C071829B39B9D009486A6 /* Resources */ = {
+		B78EC01F29B9B5320073DCCC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B76C072529B39B9E009486A6 /* Preview Assets.xcassets in Resources */,
-				B76C072229B39B9E009486A6 /* Assets.xcassets in Resources */,
+				B78EC03129B9B5330073DCCC /* LaunchScreen.storyboard in Resources */,
+				B78EC02E29B9B5330073DCCC /* Assets.xcassets in Resources */,
+				B78EC02C29B9B5320073DCCC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		95B4288BD3CD7EE78C525155 /* [CP] Check Pods Manifest.lock */ = {
+		847B2ABBC41C2C3EB5FB4482 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Manju/Pods-Manju-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Manju/Pods-Manju-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Manju/Pods-Manju-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0A97DBA880D5F77632E6180 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -214,44 +246,47 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C9AF90C9F08CB3417A55C272 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Manju/Pods-Manju-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Manju/Pods-Manju-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Manju/Pods-Manju-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B76C071629B39B9D009486A6 /* Sources */ = {
+		B78EC01D29B9B5320073DCCC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B78EC00A29B9588D0073DCCC /* VoiceOverlayViewController.swift in Sources */,
-				B76C072029B39B9D009486A6 /* ContentView.swift in Sources */,
-				B7634E4929B5645600663079 /* URLSession.swift in Sources */,
-				B76C072D29B39BC3009486A6 /* ViewA.swift in Sources */,
-				B76C073129B39BD9009486A6 /* ViewC.swift in Sources */,
-				B76C071E29B39B9D009486A6 /* ManjuApp.swift in Sources */,
-				B76C072F29B39BD0009486A6 /* ViewB.swift in Sources */,
+				B78EC02929B9B5320073DCCC /* VoiceViewController.swift in Sources */,
+				B78EC02529B9B5320073DCCC /* AppDelegate.swift in Sources */,
+				B772958129BAB74500F82263 /* ResponseRepository.swift in Sources */,
+				B772957B29BAB60600F82263 /* ManjuViewModel.swift in Sources */,
+				B772957829BAA5E400F82263 /* ManjuTabBarController.swift in Sources */,
+				B78EC03A29BA80B60073DCCC /* ResponseApiService.swift in Sources */,
+				B772957F29BAB6C400F82263 /* Response.swift in Sources */,
+				B78EC02729B9B5320073DCCC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		B78EC02A29B9B5320073DCCC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B78EC02B29B9B5320073DCCC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B78EC02F29B9B5330073DCCC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B78EC03029B9B5330073DCCC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		B76C072629B39B9E009486A6 /* Debug */ = {
+		B78EC03329B9B5330073DCCC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -311,7 +346,7 @@
 			};
 			name = Debug;
 		};
-		B76C072729B39B9E009486A6 /* Release */ = {
+		B78EC03429B9B5330073DCCC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -365,23 +400,20 @@
 			};
 			name = Release;
 		};
-		B76C072929B39B9E009486A6 /* Debug */ = {
+		B78EC03629B9B5330073DCCC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D920A7360CF2CFFCC31DC04B /* Pods-Manju.debug.xcconfig */;
+			baseConfigurationReference = 569BB75B6AFCB74F0E509D9C /* Pods-Manju.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Manju/Preview Content\"";
 				DEVELOPMENT_TEAM = FW5BACSZ6A;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Manju/Info.plist;
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -398,23 +430,20 @@
 			};
 			name = Debug;
 		};
-		B76C072A29B39B9E009486A6 /* Release */ = {
+		B78EC03729B9B5330073DCCC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21D2CAD43958C89A04F16ADD /* Pods-Manju.release.xcconfig */;
+			baseConfigurationReference = D7FA8AF26047CA7C10DE2763 /* Pods-Manju.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Manju/Preview Content\"";
 				DEVELOPMENT_TEAM = FW5BACSZ6A;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Manju/Info.plist;
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -434,25 +463,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B76C071529B39B9D009486A6 /* Build configuration list for PBXProject "Manju" */ = {
+		B78EC01C29B9B5320073DCCC /* Build configuration list for PBXProject "Manju" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B76C072629B39B9E009486A6 /* Debug */,
-				B76C072729B39B9E009486A6 /* Release */,
+				B78EC03329B9B5330073DCCC /* Debug */,
+				B78EC03429B9B5330073DCCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B76C072829B39B9E009486A6 /* Build configuration list for PBXNativeTarget "Manju" */ = {
+		B78EC03529B9B5330073DCCC /* Build configuration list for PBXNativeTarget "Manju" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B76C072929B39B9E009486A6 /* Debug */,
-				B76C072A29B39B9E009486A6 /* Release */,
+				B78EC03629B9B5330073DCCC /* Debug */,
+				B78EC03729B9B5330073DCCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B76C071229B39B9D009486A6 /* Project object */;
+	rootObject = B78EC01929B9B5320073DCCC /* Project object */;
 }

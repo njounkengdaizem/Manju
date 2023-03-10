@@ -127,13 +127,13 @@ public class InputScreenConstants {
   public var subtitleBullet = "\u{2022}"
   
   /// The list of query suggestions shown in a bullet list
-  public var subtitleBulletList = ["\"iphone case\"", "\"Running shoes\""]
+  public var subtitleBulletList = ["\"Manju what is the time?\"", "\"Manju play Try by Pink\""]
   
   /// Title shown at the very top of the screen when the recording button is activated and voice inputs have been received.
   public var titleInProgress = "Searching for:"
   
   /// Title shown at the very top of the screen when the recording button is activated and an error occured
-  public var titleError = "Sorry, we didn't quite get that"
+  public var titleError = "Sorry, I didn't quite get that"
   
   /// Subtitle shown at the top of the screen when the recording button is activated and an error occured
   public var subtitleError = "Try repeating your request."

@@ -79,15 +79,15 @@
 		9113B8F00A4CC024F57B76E8BA8E10AA /* CloseView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CloseView.swift; path = Sources/InstantSearchVoiceOverlay/Views/CloseView.swift; sourceTree = "<group>"; };
 		9AD1EE55F34E601FDF740E787A975BCC /* Recordable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Recordable.swift; path = Sources/InstantSearchVoiceOverlay/Protocols/Recordable.swift; sourceTree = "<group>"; };
 		9C4CE741D762F691BF42AB99377FE3FC /* InstantSearchVoiceOverlay-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "InstantSearchVoiceOverlay-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C5BB75FEEFB295D3C4D809DB70A5D6C7 /* Constant.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constant.swift; path = Sources/InstantSearchVoiceOverlay/Helpers/Constant.swift; sourceTree = "<group>"; };
 		C7C4724338095EDDECBBBF1FFE671307 /* siri_error.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; name = siri_error.mp3; path = Sources/InstantSearchVoiceOverlay/Sound/siri_error.mp3; sourceTree = "<group>"; };
-		C906FF0017ACE692189192383B875D74 /* InstantSearchVoiceOverlay */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = InstantSearchVoiceOverlay; path = InstantSearchVoiceOverlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C906FF0017ACE692189192383B875D74 /* InstantSearchVoiceOverlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = InstantSearchVoiceOverlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDF248D205F735C87C5CC6801806B97 /* Pods-Manju.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Manju.release.xcconfig"; sourceTree = "<group>"; };
 		D575D4D3201E2C95F73BE19E0D91508B /* Pods-Manju-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Manju-umbrella.h"; sourceTree = "<group>"; };
 		DE2D3980015F6238FD122ADF13552CD6 /* VoiceOverlayController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VoiceOverlayController.swift; path = Sources/InstantSearchVoiceOverlay/Controllers/VoiceOverlayController.swift; sourceTree = "<group>"; };
 		DF02C192E7D50AB20701E60AB264D3BF /* Pods-Manju-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Manju-acknowledgements.plist"; sourceTree = "<group>"; };
-		E86E83C7A8EB82B051E5D34A9CCB4031 /* Pods-Manju */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Manju"; path = Pods_Manju.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E86E83C7A8EB82B051E5D34A9CCB4031 /* Pods_Manju.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Manju.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +113,8 @@
 		1C170593B789DC2D5A831909AE8A026D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C906FF0017ACE692189192383B875D74 /* InstantSearchVoiceOverlay */,
-				E86E83C7A8EB82B051E5D34A9CCB4031 /* Pods-Manju */,
+				C906FF0017ACE692189192383B875D74 /* InstantSearchVoiceOverlay.framework */,
+				E86E83C7A8EB82B051E5D34A9CCB4031 /* Pods_Manju.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -220,7 +220,6 @@
 				43977E34DE8F264F277AD6C29DDBC242 /* Resources */,
 				662F5F45B5F840B70DE3FD2A20A152F3 /* Support Files */,
 			);
-			name = InstantSearchVoiceOverlay;
 			path = InstantSearchVoiceOverlay;
 			sourceTree = "<group>";
 		};
@@ -269,7 +268,7 @@
 			);
 			name = InstantSearchVoiceOverlay;
 			productName = InstantSearchVoiceOverlay;
-			productReference = C906FF0017ACE692189192383B875D74 /* InstantSearchVoiceOverlay */;
+			productReference = C906FF0017ACE692189192383B875D74 /* InstantSearchVoiceOverlay.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		762A2B2C84587E3D5E3618A53F57AE4A /* Pods-Manju */ = {
@@ -288,7 +287,7 @@
 			);
 			name = "Pods-Manju";
 			productName = Pods_Manju;
-			productReference = E86E83C7A8EB82B051E5D34A9CCB4031 /* Pods-Manju */;
+			productReference = E86E83C7A8EB82B051E5D34A9CCB4031 /* Pods_Manju.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -298,7 +297,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1420;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -402,7 +401,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/InstantSearchVoiceOverlay/InstantSearchVoiceOverlay-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/InstantSearchVoiceOverlay/InstantSearchVoiceOverlay-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -493,6 +492,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -559,6 +559,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -640,7 +641,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/InstantSearchVoiceOverlay/InstantSearchVoiceOverlay-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/InstantSearchVoiceOverlay/InstantSearchVoiceOverlay-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
