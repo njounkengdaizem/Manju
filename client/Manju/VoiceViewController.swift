@@ -33,8 +33,8 @@ class VoiceViewController: UIViewController{
         introText.textColor = .white
         subText.text = "'Manju, what is the time?'"
         subText.textColor = .white
-        startSpeech(say: "Hello, I am Manju")
-        startSpeech(say: "You can say, Manju tell me a python joke")
+//        startSpeech(say: "Hello, I am Manju")
+//        startSpeech(say: "You can say, Manju tell me a python joke")
     }
     
     @IBAction func didTapButtpn(){
@@ -45,8 +45,10 @@ class VoiceViewController: UIViewController{
             if final{
                 print("Final text: \(text)")
                 DispatchQueue.main.async {
-                    self.myViewModel.onAppear()
-                    print(self.myViewModel.response)
+                    self.myViewModel.fetchResponse {
+                    let manjuResponse = self.myViewModel.response[0]
+                        self.startSpeech(say: manjuResponse)
+                    }
                 }
                 
             }
@@ -70,7 +72,7 @@ class VoiceViewController: UIViewController{
         utterance.rate = 0.5
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             self.synthesizer.speak(utterance)
-        }
+        } 
     }
     
 }

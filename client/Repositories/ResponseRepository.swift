@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ResponseRepositoryProtocol {
-    func fetchResponse(completion: (Response)-> Void)
+    func fetchResponse(completion: @escaping (Result<[String], Error>) -> Void)
 }
 
 final class ResponseRepository: ResponseRepositoryProtocol {
@@ -18,7 +18,7 @@ final class ResponseRepository: ResponseRepositoryProtocol {
         self.apiService = apiService
     }
 
-    func fetchResponse(completion: (Response)-> Void){
+    func fetchResponse(completion: @escaping (Result<[String], Error>) -> Void){
         apiService.fetchResponse(completion: completion)
     }
 }

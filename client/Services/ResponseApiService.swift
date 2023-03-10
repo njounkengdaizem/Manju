@@ -9,13 +9,39 @@ import UIKit
 
 
 protocol ResponseApiServiceProtocol {
-    func fetchResponse(completion: (Response)-> Void)
+    func fetchResponse(completion: @escaping (Result<[String], Error>) -> Void)
 }
 
 final class ResponseApiService: ResponseApiServiceProtocol {
-    func fetchResponse(completion: (Response) -> Void) {
-        completion(.init(response: [ "Test data here"]))
+    
+    func fetchResponse(completion: @escaping (Result<[String], Error>) -> Void) {
+        guard let url = URL(string: "http://localhost:5500/getRequest") else {
+            completion(.failure(NSError(domain: "ResponseApiService", code: -1, userInfo: [NSLocalizedDescriptionKey: "Invalid URL"])))
+            return
+        }
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            guard let data = data else {
+                completion(.failure(NSError(domain: "ResponseApiService", code: -1, userInfo: [NSLocalizedDescriptionKey: "No data received"])))
+                return
+            }
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            do {
+                let response = try decoder.decode(Response.self, from: data)
+                completion(.success(response.response))
+            } catch {
+                completion(.failure(error))
+            }
+        }.resume()
     }
+//
+//    func fetchResponse(completion: (Response) -> Void) {
+//        completion(.init(response: [ "Test data here"]))
+//    }
 }
 
 

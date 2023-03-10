@@ -17,10 +17,17 @@ final class ManjuViewModel: ObservableObject{
         self.repository = repository
     }
     
-    func onAppear (){
-        repository.fetchResponse { res in
-            self.response = res.response
+    func fetchResponse(completion: @escaping () -> Void) {
+        repository.fetchResponse { result in
+            switch result {
+            case .success(let manjuResponse):
+                self.response = manjuResponse
+                print(manjuResponse)
+            case .failure(let error):
+                print("Error fetching response: \(error.localizedDescription)")
+            }
+            
+            completion()
         }
     }
-    
 }
