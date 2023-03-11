@@ -45,21 +45,21 @@ class VoiceViewController: UIViewController{
             if final{
                 print("Final text: \(text)")
                 if text.contains("Manju"){
-                    
                     DispatchQueue.main.async {
                         //Not sure what to do with this getRequest yet
                         //                    self.myViewModel.fetchResponse {
                         //                    let manjuResponse = self.myViewModel.response[0]
                         //                        self.startSpeech(say: manjuResponse)
                         //                    }
-                        self.myViewModel.postCommand(command:text){
+                        
+                        self.myViewModel.postCommand(command:[text]){
                             let reply = self.myViewModel.manjuReply
-                            self.startSpeech(say: reply)
+                            self.startSpeech(say: reply[0])
                         }
                     }
                 }
                     else{
-                        self.startSpeech(say: "Please begin with Manju. You can say, Manju tell me a joke")
+//                        self.startSpeech(say: "Please begin with Manju. You can say, Manju tell me a joke")
                     }
             }
             else{

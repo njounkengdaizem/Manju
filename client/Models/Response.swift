@@ -10,3 +10,7 @@ import UIKit
 struct Response: Codable {
     let response: [String]
 }
+
+struct Command: Codable {
+    let command: [String]
+}

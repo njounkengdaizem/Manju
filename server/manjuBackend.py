@@ -14,7 +14,7 @@ import wikipedia
 import pyjokes
 
 
-class Daisy():
+class Manju:
     """
     Daisy is a class that provides a simple interface to interact with the user using speech recognition and Text-to-Speech.
     The class uses several libraries such as speech_recognition, pyttsx3, pywhatkit, datetime, time, pynput, wikipedia, pyjokes.
@@ -95,20 +95,24 @@ class Daisy():
         keyboard = Controller()
         keyboard.type("Hi beautiful, how are you doing?")
         keyboard.press(Key.enter)
+    
+    def askChatGPT(self, command: str):
+        result = ["Yay this walked"]
+        print(result)
+        return result[0]
 
     def executioner(self, command):
-        match command:
-            case x if "play" in x:
-                self.play_media(x.replace('play', '').strip())
-            case x if "message" in x:
-                self.send_whatsapp_message("john")
-            case x if "image" in x:
-                self.send_whatsapp_image('phone number', 'image path')
-            case x if "time" in x:
-                self.current_time()
-            case x if "text" in x:
-                self.send_message('phone number')
+        actions = {
+            "play": self.play_media,
+            "message": lambda: self.send_whatsapp_message("john"),
+            "image": lambda: self.send_whatsapp_image('phone number', 'image path'),
+            "time": self.current_time,
+            "text": lambda: self.send_message('phone number')
+        }
+        for action, func in actions.items():
+            if action in command:
+                func()
+                break
+        else:
+            self.askChatGPT(command)
 
-
-test = Daisy()
-test.take_command()

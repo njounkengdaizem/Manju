@@ -10,7 +10,7 @@ import Foundation
 final class ManjuViewModel: ObservableObject{
     
     @Published var response = ["Hardcoded test here"]
-    @Published var manjuReply = "Unable to process at the moment"
+    @Published var manjuReply = ["Unable to process at the moment"]
     
     private let repository: ResponseRepositoryProtocol
     
@@ -31,7 +31,7 @@ final class ManjuViewModel: ObservableObject{
             completion()
         }
     }
-    func postCommand(command: String, completion: @escaping () -> Void) {
+    func postCommand(command: [String], completion: @escaping () -> Void) {
         repository.postCommand(command:command) { result in
             switch result {
             case .success(let responseString):
