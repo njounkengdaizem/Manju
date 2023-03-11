@@ -12,6 +12,7 @@ from pynput.keyboard import Key, Controller
 import datetime
 import wikipedia
 import pyjokes
+import openai
 
 
 class Manju:
@@ -27,6 +28,7 @@ class Manju:
         self.listener = speech.Recognizer()
         self.engine = pyttsx3.init()
         self.responseList = []
+        self.authentication = ""
         # self.voices = self.engine.getProperty('voices')
         # print(self.voices)
         # print(self.voices)
@@ -98,10 +100,16 @@ class Manju:
         keyboard.press(Key.enter)
     
     def askChatGPT(self, command: str):
-        result = "Yay this worked"
-        # print(command)
-        self.responseList.append(result)
-        
+        # openai.api_key = os.getenv("OPENAI_API_KEY")
+        openai.api_key = self.authentication
+
+        chatGPTResponse = openai.Edit.create(
+            model="text-davinci-edit-001",
+            input= command,
+            instruction="Answer question asked."
+            )
+        self.responseList.append(chatGPTResponse["choices"][0]["text"])
+        print(self.responseList)
         return self.responseList
 
     def executioner(self, command):
@@ -119,4 +127,3 @@ class Manju:
         else:
             return self.askChatGPT(command)
         return ["Sorry couldn't find an answer"]
-

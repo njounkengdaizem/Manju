@@ -51,8 +51,8 @@ class VoiceViewController: UIViewController{
                         //                    let manjuResponse = self.myViewModel.response[0]
                         //                        self.startSpeech(say: manjuResponse)
                         //                    }
-                        
-                        self.myViewModel.postCommand(command:[text]){
+                        let command = text.replacingOccurrences(of: "manju ?", with: "", options: [.caseInsensitive, .regularExpression])
+                        self.myViewModel.postCommand(command:[command]){
                             let reply = self.myViewModel.manjuReply
                             print(reply)
                             self.startSpeech(say: reply[0])
