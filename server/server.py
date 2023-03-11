@@ -16,10 +16,11 @@ def post_request():
     print(request_data)
     if not request_data:
         return "No data received", 400 # Return an error response
-    response = manju.executioner(request_data[0])
-    print(response)
+    result = manju.executioner(request_data[0])
+    print("This is server result", result)
+    print({"response": result})
 
-    return response
+    return {"response": result}
 
 if __name__ == '__main__':
     app.run(port=5500, debug=True)

@@ -26,6 +26,7 @@ class Manju:
         """
         self.listener = speech.Recognizer()
         self.engine = pyttsx3.init()
+        self.responseList = []
         # self.voices = self.engine.getProperty('voices')
         # print(self.voices)
         # print(self.voices)
@@ -97,9 +98,11 @@ class Manju:
         keyboard.press(Key.enter)
     
     def askChatGPT(self, command: str):
-        result = ["Yay this walked"]
-        print(result)
-        return result[0]
+        result = "Yay this worked"
+        # print(command)
+        self.responseList.append(result)
+        
+        return self.responseList
 
     def executioner(self, command):
         actions = {
@@ -114,5 +117,6 @@ class Manju:
                 func()
                 break
         else:
-            self.askChatGPT(command)
+            return self.askChatGPT(command)
+        return ["Sorry couldn't find an answer"]
 

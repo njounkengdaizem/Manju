@@ -65,8 +65,9 @@ final class ResponseApiService: ResponseApiServiceProtocol {
             
             if let data = data {
                 do {
-                    let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String]
-                    completion(.success(json ?? []))
+                    let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: [String]]
+                    let response = json?["response"] ?? []
+                    completion(.success(response))
                 } catch {
                     completion(.failure(error))
                 }

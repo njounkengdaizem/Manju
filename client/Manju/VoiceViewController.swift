@@ -54,6 +54,7 @@ class VoiceViewController: UIViewController{
                         
                         self.myViewModel.postCommand(command:[text]){
                             let reply = self.myViewModel.manjuReply
+                            print(reply)
                             self.startSpeech(say: reply[0])
                         }
                     }
