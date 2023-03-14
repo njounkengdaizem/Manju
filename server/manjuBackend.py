@@ -103,11 +103,11 @@ class Manju:
         # openai.api_key = os.getenv("OPENAI_API_KEY")
         openai.api_key = self.authentication
 
-        chatGPTResponse = openai.Edit.create(
-            model="text-davinci-edit-001",
-            input= command,
-            instruction="Answer question asked."
-            )
+
+        chatGPTResponse = openai.Completion.create(
+            model="text-davinci-003",
+            prompt= command,
+            temperature = 0)
         self.responseList.append(chatGPTResponse["choices"][0]["text"])
         print(self.responseList)
         return self.responseList
